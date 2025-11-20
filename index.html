@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kuliner Nganjuk</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">🍽️ Kuliner Nganjuk</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+    </div>
+    <div class="container search-area">
+      <input id="searchInput" class="search-input" placeholder="Cari makanan, lokasi, atau kata kunci..." />
+      <select id="categoryFilter" class="select">
+        <option value="">Semua Kategori</option>
+        <option value="tradisional">Tradisional</option>
+        <option value="modern">Modern</option>
+        <option value="street">Street Food</option>
+        <option value="minuman">Minuman</option>
+        <option value="cemilan">Cemilan</option>
+      </select>
+      <select id="ratingFilter" class="select">
+        <option value="">Semua Rating</option>
+        <option value="4.5">4.5 ↑</option>
+        <option value="4.0">4.0 ↑</option>
+        <option value="3.5">3.5 ↑</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="listWrap" class="grid-list">
+      <!-- cards injected here -->
+    </section>
+    <div id="noResult" class="no-result" style="display:none">Tidak ada kuliner ditemukan.</div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Kuliner Nganjuk — Dibuat untuk masyarakat Nganjuk</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/filter.js"></script>
+</body>
+</html>

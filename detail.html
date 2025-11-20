@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Detail Kuliner — Kuliner Nganjuk</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">🍽️ Kuliner Nganjuk</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content" id="detailContent">
+    <!-- detail injected here -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Kuliner Nganjuk</p>
+    </div>
+  </footer>
+
+  <script>
+    async function loadDetail() {
+      const params = new URLSearchParams(location.search);
+      const id = params.get('id');
+      if (!id) {
+        document.getElementById('detailContent').innerHTML = '<p>Data tidak ditemukan.</p>';
+        return;
+      }
+
+      const res = await fetch('data/kuliner.json');
+      const data = await res.json();
+      const item = data.find(i => String(i.id) === String(id));
+      if (!item) {
+        document.getElementById('detailContent').innerHTML = '<p>Data tidak ditemukan.</p>';
+        return;
+      }
+
+      document.getElementById('detailContent').innerHTML = `
+        <article class="detail-card">
+          <img src="${item.gambar}" alt="${item.nama}" class="detail-img"/>
+          <div class="detail-body">
+            <h2>${item.nama}</h2>
+            <p class="muted">⭐ ${item.rating} — ${item.harga}</p>
+            <p><strong>Lokasi:</strong> ${item.lokasi}</p>
+            <p>${item.deskripsi}</p>
+            <p><a href="${item.sharelok}" target="_blank" class="btn">Lihat di Maps</a>
+            <a href="index.html" class="btn ghost">Kembali</a></p>
+          </div>
+        </article>
+      `;
+    }
+
+    loadDetail();
+  </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontak — Kuliner Nganjuk</title>
+  <link rel="stylesheet" href="css/stylele.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand">🍽️ Kuliner Nganjuk</h1>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="contact.html" class="nav-link active">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+       <!-- purpenas -->
+     <div class="puspresnas-infobox">
+      <div class="infobox-logos">
+        <img 
+          src="isceh.png" 
+          alt="foto"
+          class="logo-tutwuri"
+        >
+        <h1>TIM PENGGANGURAN</h1>
+      </div>
+      <div class="infobox-info">
+        <p class="title">SMA NEGERI 1 NGANJUK</p>
+        <p class="title">TIM PENGGANGURAN</p>
+      </div>
+  
+      <div class="infobox-contact">
+        <h3>Kontak Kami</h3>
+        <address>
+          Jl. Kap. Kasihin Hs No.4, Cangkringan, Bogo, Kec. Nganjuk<br>
+          Kabupaten Nganjuk, Jawa Timur 64415
+        </address>
+        <p>
+          <a href="mailto:sispegam@gmail.com">sispegam@gmail.com</a>
+        </p>
+        <p>
+          <a href="https://wa.me/6285785857866" target="_blank">📞(Whatsapp) Aji</a>
+          <a href="https://wa.me/6289501320407" target="_blank">📞(Whatsapp) Dilan</a>
+        </p>
+      </div>
+    </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Kuliner Nganjuk</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('suggestForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      document.getElementById('formMsg').innerText = 'Usulan berhasil dikirim. Terima kasih!';
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>
