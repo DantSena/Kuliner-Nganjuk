@@ -1,0 +1,182 @@
+/* --- Style Info Box Puspresnas --- */
+.puspresnas-infobox {
+  background-color: #e0b943; /* Warna kuning mustard */
+  color: white;
+  position: flex; 
+  padding: 20px;
+  overflow: hidden; 
+}
+
+.puspresnas-infobox h1 {
+  font-size: 40px;
+  padding-right: 30rem;
+}
+
+/* --- Bagian Logo (Menggunakan Flexbox) --- */
+.infobox-logos {
+  display: flex; 
+  margin-bottom: 25px;
+  justify-content: space-between;
+}
+
+.infobox-logos .logo-tutwuri {
+  height: 80px;
+  padding-right: 20px;
+  object-fit: contain;
+}
+
+.infobox-logos .divider {
+  border-left: 2px solid white;
+  height: 50px;
+  margin-right: 15px;
+}
+
+/* --- Bagian Info & Kontak --- */
+.infobox-info {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.infobox-info .title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.infobox-contact h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.infobox-contact p,
+.infobox-contact address {
+  font-size: 14px;
+  margin: 8px 0;
+  line-height: 1.5;
+  font-style: normal; 
+}
+
+.infobox-contact a {
+  color: white;
+  text-decoration: none;
+  word-break: break-all; 
+}
+
+.infobox-contact a:hover {
+  text-decoration: underline;
+}
+
+/* --- Bagian Maskot --- */
+.floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.menu {
+  position: fixed;
+  bottom: 100px;
+  right: 40px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 9999;
+}
+
+.menu h4 {
+  margin: 0 0 10px;
+  color: #007bff;
+  font-size:  25px;
+}
+
+.menu a {
+  display: block;
+  padding: 5px 0;
+  text-decoration: none;
+  color: #007bff;
+   font-size:  20px;
+}
+
+.floating img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: block;
+  background-color: white; /* area putih di belakang logo */
+  padding: 1px;            /* tebal ruang putih */
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.15); /* opsional: biar ada bayangan lembut */
+
+}
+
+
+  /* FOOTER */
+  footer {
+    margin-top: 0px;
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  /* --- Responsif untuk perangkat mobile --- */
+@media (max-width: 768px) {
+  .puspresnas-infobox {
+    padding: 30px;
+    margin: 0px;
+  }
+
+  .puspresnas-infobox h1 {
+  font-size: 25px;
+  padding-right: 1rem;
+}
+
+  .infobox-logos {
+    flex-direction:row;
+  }
+
+  .infobox-logos .logo-tutwuri {
+    margin-right: 0;
+    margin-bottom: 2px;
+  }
+
+  .infobox-logos .divider {
+    border-left: none;
+    border-top: 2px solid #dd5948;
+    height: 2px;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .infobox-mascot {
+    position: fixed;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: white; /* area putih di belakang logo */
+    padding: 1px;            /* tebal ruang putih */
+    box-shadow: 0 16px 6px rgba(0,0,0,0.15); /* opsional: biar ada bayangan lembut */
+
+  }
+
+  .infobox-info,
+  .infobox-contact {
+    font-size: 12px;
+  }
+
+  .infobox-info .title,
+  .infobox-contact h3 {
+    font-size: 14px;
+  }
+}
